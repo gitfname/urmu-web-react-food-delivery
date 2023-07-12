@@ -1,17 +1,27 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
 import "./i18n.js"
-import { ThemeProvider } from "@material-tailwind/react"
 import { BrowserRouter } from "react-router-dom"
+import SplashScreen from './pages/SplashScreen/SplashScreen.tsx'
+// import sleep from './utils/sleep.ts'
+
+// const ChakraProvider = lazy(() => import("@chakra-ui/react").then(module => ({ default: module.ChakraProvider })))
+import { ChakraProvider } from "@chakra-ui/react"
+import App from './App.tsx'
+// const App = lazy(async () => {
+//   await sleep(5000)
+//   return import("./App.tsx")
+// })
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
+        <ChakraProvider>
+          <Suspense fallback={<SplashScreen />}>
+            <App />
+          </Suspense>
+        </ChakraProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode >,
 )

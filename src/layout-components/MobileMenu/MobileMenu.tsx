@@ -1,13 +1,17 @@
 
 import {
-    Drawer,
-    IconButton,
-} from "@material-tailwind/react"
-import {
-    XMarkIcon,
     Bars3Icon
 } from "@heroicons/react/24/outline";
-import { useDisclosure } from "@chakra-ui/react"
+import {
+    useDisclosure,
+    Button,
+    Drawer,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    DrawerHeader,
+    DrawerBody
+} from "@chakra-ui/react"
 
 function MobileMenu() {
 
@@ -15,19 +19,39 @@ function MobileMenu() {
 
     return (
         <>
-            <IconButton variant="text" size="sm" className="bg-blue-500/5" onClick={onOpen}>
-                <Bars3Icon strokeWidth={1.5} className="w-4 h-4" />
-            </IconButton>
-        
+            <Button
+                colorScheme="teal"
+                onClick={onOpen}
+                size="sm"
+            >
+                <Bars3Icon strokeWidth={2} className="w-4 h-4 text-gray-50" />
+            </Button>
+
             <Drawer
-                open={isOpen}
+                size="xs"
+                placement="left"
+                isOpen={isOpen}
                 onClose={onClose}
             >
-                <div className="flex justify-end py-3 px-3 pb-6">
-                    <IconButton size="sm" onClick={onClose} variant="text">
-                        <XMarkIcon strokeWidth={1.5} className="w-4 h-4" />
-                    </IconButton>
-                </div>
+
+                <DrawerOverlay />
+                
+                <DrawerContent>
+
+                    <DrawerCloseButton />
+
+                    <DrawerHeader
+                        textAlign="center"
+                    >
+                        UFood
+                    </DrawerHeader>
+
+                    <DrawerBody>
+                        <p>hello world</p>
+                    </DrawerBody>
+
+                </DrawerContent>
+
             </Drawer>
         </>
     )

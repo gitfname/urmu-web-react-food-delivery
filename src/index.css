@@ -1,3 +1,82 @@
+
+.primary-btn {
+    @apply text-sm text-gray-50 w-max py-2 px-3.5 rounded-3xl bg-[--primary-color] shadow-md shadow-black/10
+    active:scale-95 transition-all duration-300 active:shadow-black/5 hover:bg-[--primary-color-dark];
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    @apply text-[14px] xl:text-[16px] 2xl:text-[18px];
+}
+  
+  
+  @font-face {
+    font-family: iranyekan100;
+    src: url(/fonts/iranyekan/Qs_Iranyekan-thin.ttf);
+  }
+  @font-face {
+    font-family: iranyekan200;
+    src: url(/fonts/iranyekan/Qs_Iranyekan-light.ttf);
+  }
+  @font-face {
+    font-family: iranyekan300;
+    src: url(/fonts/iranyekan/Qs_Iranyekan.ttf);
+  }
+  @font-face {
+    font-family: iranyekan400;
+    src: url(/fonts/iranyekan/Qs_Iranyekan-bold.ttf);
+  }
+  @font-face {
+    font-family: iranyekan500;
+    src: url(/fonts/iranyekan/Qs_Iranyekan-medium.ttf);
+  }
+  @font-face {
+    font-family: iranyekan600;
+    src: url(/fonts/iranyekan/Qs_Iranyekan-extrabold.ttf);
+  }
+  @font-face {
+    font-family: iranyekan700;
+    src: url(/fonts/iranyekan/Qs_Iranyekan-black.ttf);
+  }
+  @font-face {
+    font-family: iranyekan800;
+    src: url(/fonts/iranyekan/Qs_Iranyekan-extrablack.ttf);
+  }
+  
+  /* vazir */
+  @font-face {
+    font-family: vazirThin;
+    src: url(/fonts/vazir/Vazir-Thin.ttf);
+  }
+  @font-face {
+    font-family: vazirLight;
+    src: url(/fonts/vazir/Vazir-Light.ttf);
+  }
+  @font-face {
+    font-family: vazir;
+    src: url(/fonts/vazir/Vazir.ttf);
+  }
+  @font-face {
+    font-family: vazirMedium;
+    src: url(/fonts/vazir/Vazir-Medium.ttf);
+  }
+  @font-face {
+    font-family: vazirBold;
+    src: url(/fonts/vazir/Vazir-Bold.ttf);
+  }
+  
+  /* forte */
+  @font-face {
+    font-family: forte;
+    src: url(/fonts/forte.ttf);
+  }
+
+
+:root {
+    --primary-color: #F86A2E;
+    --primary-color-dark: #f15d1e;
+    --primary-color-darker: #e35112;
+}
