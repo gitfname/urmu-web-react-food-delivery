@@ -1,6 +1,6 @@
 Vite+React StarterKit
 
-Dependencies
+** Dependencies **
 
     +-- Vite
 
