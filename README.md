@@ -18,7 +18,7 @@ Vite+React StarterKit
 
 **Folder Structure**
 
-    **src**
+    src
         +-- assets              # assets folder can contain all the static files such as images, fonts, etc.
 
         +-- components          # shared components used across the entire application
@@ -58,5 +58,5 @@ Vite+React StarterKit
 
         +-- themes              # theme files are served from here ( light.css, dark.css, etc )
 
-    **public**
+    public
         +-- locals              # translation files are served from here ( en/translation.json, fr/translation.json etc )
