@@ -11,6 +11,7 @@ Vite+React StarterKit
     +-- i18next
     +-- TailwindCSS
     +-- Material-Tailwind/React
+    +-- Zustand
 
 
 
