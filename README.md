@@ -2,23 +2,23 @@ Vite+React StarterKit
 
 Dependencies
 
-+-- Vite
+    +-- Vite
 
-+-- React
+    +-- React
 
-+-- FramerMotion
+    +-- FramerMotion
 
-+-- Chakra-Ui
+    +-- Chakra-Ui
 
-+-- AntDesign
+    +-- AntDesign
 
-+-- ReactRouterDom
+    +-- ReactRouterDom
 
-+-- i18next
+    +-- i18next
 
-+-- TailwindCSS
+    +-- TailwindCSS
 
-+-- Material-Tailwind/React
+    +-- Material-Tailwind/React
 
 
 
