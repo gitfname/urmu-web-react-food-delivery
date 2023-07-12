@@ -17,6 +17,7 @@ Vite+React StarterKit
 
 
 **src**
+
     +-- assets              # assets folder can contain all the static files such as images, fonts, etc.
 
     +-- components          # shared components used across the entire application
