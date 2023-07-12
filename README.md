@@ -12,6 +12,8 @@ Vite+React StarterKit
     +-- TailwindCSS
     +-- Material-Tailwind/React
     +-- Zustand
+    +-- Axios
+    +-- SWR
 
 
 
