@@ -1,30 +1,22 @@
 Vite+React StarterKit
 
-** Dependencies **
+**Dependencies**
 
     +-- Vite
-
     +-- React
-
     +-- FramerMotion
-
     +-- Chakra-Ui
-
     +-- AntDesign
-
     +-- ReactRouterDom
-
     +-- i18next
-
     +-- TailwindCSS
-
     +-- Material-Tailwind/React
 
 
 
 
 
-src
+**src**
     +-- assets              # assets folder can contain all the static files such as images, fonts, etc.
 
     +-- components          # shared components used across the entire application
