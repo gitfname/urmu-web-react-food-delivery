@@ -8,6 +8,7 @@ import { VerifyPhone } from "./pages/VerifyPhone";
 import { CreateAccount } from "./pages/CreateAccount";
 import { ApplicationDefaultLang, ApplicationSupportedLangs } from "./constants";
 import { Login } from "./pages/Login";
+import { ApplicationRoutes } from "./routes";
 
 
 function App() {
@@ -28,15 +29,13 @@ function App() {
     [i18n.language]
   )
 
-  return <Login />
-
   return (
     <ApplicationLayout>
 
       <Routes>
 
         <Route
-          path="/"
+          path={ApplicationRoutes.home}
           element={<HomePage />}
         />
 
