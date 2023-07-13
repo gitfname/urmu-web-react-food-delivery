@@ -5,6 +5,7 @@ import { HomePage } from "./pages/Home";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import PreLogin from "./pages/PreLogin/PreLogin";
+import { CreateAccount } from "./pages/CreateAccount";
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
     [i18n.language]
   )
 
-  return <PreLogin />
+  return <CreateAccount />
   
   return (
     <ApplicationLayout>

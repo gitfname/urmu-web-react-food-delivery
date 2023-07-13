@@ -1,7 +1,23 @@
 
 .primary-btn {
     @apply text-sm text-gray-50 w-max py-2 px-3.5 rounded-3xl bg-[--primary-color] shadow-md shadow-black/10
-    active:scale-95 transition-all duration-300 active:shadow-black/5 hover:bg-[--primary-color-dark];
+    active:scale-95 transition-all duration-300 active:shadow-black/5 hover:bg-[--primary-color-dark] font-[vazir];
+}
+
+.typogrophy-1 {
+  @apply text-xl text-slate-800 font-[vazirMedium];
+}
+.typogrophy-2 {
+  @apply text-lg text-slate-800 font-[vazirMedium];
+}
+.typogrophy-3 {
+  @apply text-base text-slate-800 font-[vazir];
+}
+.typogrophy-4 {
+  @apply text-sm text-slate-800 font-[vazir];
+}
+.typogrophy-5 {
+  @apply text-xs text-slate-800 font-[vazir];
 }
 
 @tailwind base;
