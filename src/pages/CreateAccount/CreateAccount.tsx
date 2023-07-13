@@ -25,22 +25,32 @@ function CreateAccount() {
                 <div className="flex flex-col gap-y-3 mt-7">
                     <InputGroup>
                         <InputLeftElement>
-                            <UserIcon strokeWidth={1.5} className="w-5 h-5 text-slate-600" />
+                            <LockClosedIcon strokeWidth={1.5} className="w-5 h-5 text-[--primary-color-70]" />
                         </InputLeftElement>
                         <Input
-                            placeholder="نام کاربری"
+                            placeholder="رمز ارسالی را وارد نمایید"
                             variant="filled"
                             fontFamily="vazir"
                             type="text"
                             maxLength={20}
-                            bgColor="blackAlpha.50"
                             rounded="lg"
+                            fontSize="sm"
+                            bgColor="var(--primary-color-10)"
+                            _placeholder={{
+                                textColor: "var(--primary-color-60)"
+                            }}
+                            _hover={{
+                                bgColor: "var(--primary-color-5)"
+                            }}
+                            _focus={{
+                                borderColor: "var(--primary-color-40)"
+                            }}
                         />
                     </InputGroup>
 
                     <InputGroup>
                         <InputLeftElement>
-                            <PhoneIcon strokeWidth={1.5} className="w-5 h-5 text-slate-600" />
+                            <PhoneIcon strokeWidth={1.5} className="w-5 h-5 text-[--primary-color-70]" />
                         </InputLeftElement>
                         <Input
                             placeholder="شماره موبایل"
@@ -48,14 +58,24 @@ function CreateAccount() {
                             fontFamily="vazir"
                             type="number"
                             maxLength={11}
-                            bgColor="blackAlpha.50"
                             rounded="lg"
+                            fontSize="sm"
+                            bgColor="var(--primary-color-10)"
+                            _placeholder={{
+                                textColor: "var(--primary-color-60)"
+                            }}
+                            _hover={{
+                                bgColor: "var(--primary-color-5)"
+                            }}
+                            _focus={{
+                                borderColor: "var(--primary-color-40)"
+                            }}
                         />
                     </InputGroup>
 
                     <InputGroup>
                         <InputLeftElement>
-                            <LockClosedIcon strokeWidth={1.5} className="w-5 h-5 text-slate-600" />
+                            <LockClosedIcon strokeWidth={1.5} className="w-5 h-5 text-[--primary-color-70]" />
                         </InputLeftElement>
                         <Input
                             placeholder="رمز عبور"
@@ -64,14 +84,24 @@ function CreateAccount() {
                             type="password"
                             maxLength={20}
                             minLength={6}
-                            bgColor="blackAlpha.50"
                             rounded="lg"
+                            fontSize="sm"
+                            bgColor="var(--primary-color-10)"
+                            _placeholder={{
+                                textColor: "var(--primary-color-60)"
+                            }}
+                            _hover={{
+                                bgColor: "var(--primary-color-5)"
+                            }}
+                            _focus={{
+                                borderColor: "var(--primary-color-40)"
+                            }}
                         />
                     </InputGroup>
 
                     <InputGroup>
                         <InputLeftElement>
-                            <LockClosedIcon strokeWidth={1.5} className="w-5 h-5 text-slate-600" />
+                            <LockClosedIcon strokeWidth={1.5} className="w-5 h-5 text-[--primary-color-70]" />
                         </InputLeftElement>
                         <Input
                             placeholder="تکرار رمز عبور"
@@ -80,8 +110,18 @@ function CreateAccount() {
                             type="password"
                             maxLength={20}
                             minLength={6}
-                            bgColor="blackAlpha.50"
                             rounded="lg"
+                            fontSize="sm"
+                            bgColor="var(--primary-color-10)"
+                            _placeholder={{
+                                textColor: "var(--primary-color-60)"
+                            }}
+                            _hover={{
+                                bgColor: "var(--primary-color-5)"
+                            }}
+                            _focus={{
+                                borderColor: "var(--primary-color-40)"
+                            }}
                         />
                     </InputGroup>
 

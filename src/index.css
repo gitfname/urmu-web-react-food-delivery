@@ -25,7 +25,22 @@
 @tailwind utilities;
 
 :root {
-    @apply text-[14px] xl:text-[16px] 2xl:text-[18px];
+  --primary-color: #F86A2E;
+  --primary-color-5: rgba(248, 106, 46, 0.05);
+  --primary-color-10: rgba(248, 106, 46, 0.1);
+  --primary-color-20: rgba(248, 106, 46, 0.2);
+  --primary-color-30: rgba(248, 106, 46, 0.3);
+  --primary-color-40: rgba(248, 106, 46, 0.4);
+  --primary-color-50: rgba(248, 106, 46, 0.5);
+  --primary-color-60: rgba(248, 106, 46, 0.6);
+  --primary-color-70: rgba(248, 106, 46, 0.7);
+  --primary-color-80: rgba(248, 106, 46, 0.8);
+  --primary-color-90: rgba(248, 106, 46, 0.9);
+  --primary-color-95: rgba(248, 106, 46, 0.95);
+  --primary-color-dark: #f15d1e;
+  --primary-color-darker: #e35112;
+  
+  @apply text-[14px] xl:text-[16px] 2xl:text-[18px];
 }
   
   
@@ -89,10 +104,3 @@
     font-family: forte;
     src: url(/fonts/forte.ttf);
   }
-
-
-:root {
-    --primary-color: #F86A2E;
-    --primary-color-dark: #f15d1e;
-    --primary-color-darker: #e35112;
-}

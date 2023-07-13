@@ -4,17 +4,20 @@ import ApplicationLayout from "./layouts/ApplicationLayout";
 import { HomePage } from "./pages/Home";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import PreLogin from "./pages/PreLogin/PreLogin";
+import { VerifyPhone } from "./pages/VerifyPhone";
 import { CreateAccount } from "./pages/CreateAccount";
+import { ApplicationDefaultLang, ApplicationSupportedLangs } from "./constants";
 
 
 function App() {
 
-  const [ _, i18n ] = useTranslation()
+  const [_, i18n] = useTranslation()
 
   useEffect(
     () => {
-      if(i18n.dir(i18n.language) === "rtl") {
+      if (!ApplicationSupportedLangs.includes(i18n.language)) i18n.changeLanguage(ApplicationDefaultLang)
+
+      if (i18n.dir(i18n.language) === "rtl") {
         document.body.setAttribute("dir", "rtl")
       }
       else {
@@ -24,8 +27,8 @@ function App() {
     [i18n.language]
   )
 
-  return <CreateAccount />
-  
+  return <VerifyPhone />
+
   return (
     <ApplicationLayout>
 
