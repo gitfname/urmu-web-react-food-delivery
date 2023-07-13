@@ -129,6 +129,11 @@ function CreateAccount() {
                         ساخت اکانت
                     </button>
 
+                    <button className="text-sm text-[--primary-color-80] font-[vazir] mt-3
+                    hover:text-[--primary-color-95] transition-colors duration-200">
+                        از قبل اکانت دارید ؟
+                    </button>
+
                 </div>
 
             </div>

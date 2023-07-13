@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { VerifyPhone } from "./pages/VerifyPhone";
 import { CreateAccount } from "./pages/CreateAccount";
 import { ApplicationDefaultLang, ApplicationSupportedLangs } from "./constants";
+import { Login } from "./pages/Login";
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
     [i18n.language]
   )
 
-  return <VerifyPhone />
+  return <Login />
 
   return (
     <ApplicationLayout>
