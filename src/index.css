@@ -104,3 +104,18 @@
     font-family: forte;
     src: url(/fonts/forte.ttf);
   }
+
+
+
+@keyframes scroll-1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+  
+.scroll-from-100-to-negative-100 {
+  animation: scroll-1 20s 0s linear infinite;
+}

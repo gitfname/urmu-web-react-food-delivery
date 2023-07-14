@@ -1,9 +1,32 @@
+import { ReactNode } from "react";
+import { Slider } from "./components/Slider";
 
-function DataSection_1() {
+interface Props {
+  title: string;
+  data: any;
+  renderer(data: any): ReactNode;
+  titleClassName?: string;
+  sliderClassName?: string;
+}
+
+function DataSection_1({ data = undefined, title, renderer, sliderClassName, titleClassName }: Props) {
   return (
-    <div className="">
+    <>
+      <p
+        className={`text-2xl text-gray-800 font-[vazirBold] flex items-center gap-x-2 ${titleClassName}`}
+      >
+          {title}
+      </p>
 
-    </div>
+      <div className="mt-8">
+        <Slider
+        sliderClassName={sliderClassName}
+          data={data}
+          renderer={renderer}
+        />
+      </div>
+    </>
+
   )
 }
 

@@ -9,6 +9,7 @@ import SplashScreen from './pages/SplashScreen/SplashScreen.tsx'
 // const ChakraProvider = lazy(() => import("@chakra-ui/react").then(module => ({ default: module.ChakraProvider })))
 import { ChakraProvider } from "@chakra-ui/react"
 import App from './App.tsx'
+import CartDrawer from './features/CartDrawer/CartDrawer.tsx'
 // const App = lazy(async () => {
 //   await sleep(5000)
 //   return import("./App.tsx")
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Suspense fallback={<SplashScreen />}>
             <App />
           </Suspense>
+          <CartDrawer />
         </ChakraProvider>
     </BrowserRouter>
   </React.StrictMode >,
