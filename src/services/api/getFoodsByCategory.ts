@@ -16,7 +16,7 @@ async function getFoodsByCategoryId({ id }: getFoodsByCategoryIdProps):Promise<g
             resolve({
                 data: getFoodsByCategory_dataFn(id)
             })
-        }, 300)
+        }, 3000)
     ))
     // const url = ""
 
