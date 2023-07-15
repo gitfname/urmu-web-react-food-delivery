@@ -15,7 +15,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 1
     },
     {
         id: 21879,
@@ -29,7 +30,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 2
     },
     {
         id: 59103,
@@ -43,7 +45,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 3
     },
     {
         id: 40785,
@@ -57,7 +60,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 4
     },
     {
         id: 91340,
@@ -71,7 +75,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 5
     },
     {
         id: 83156,
@@ -85,7 +90,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 6
     },
     {
         id: 65280,
@@ -99,7 +105,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 7
     },
     {
         id: 33519,
@@ -113,7 +120,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 8
     },
     {
         id: 72946,
@@ -127,7 +135,8 @@ const ourNewMeals: Array<FoodProps> = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 9
     }
 ]
 

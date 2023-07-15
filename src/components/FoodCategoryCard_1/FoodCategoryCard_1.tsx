@@ -1,17 +1,21 @@
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ApplicationRoutes } from "../../routes";
 
 interface Props {
+  id: number;
   title: string;
   img: string;
 }
 
-function FoodCategoryCard_1({ img, title }: Props) {
+function FoodCategoryCard_1({ img, title, id }: Props) {
+
+  const navigate = useNavigate()
+  
   return (
-    <Link
-      to={ApplicationRoutes.pages.category(33)}
-      className="w-full block aspect-square rounded-3xl overflow-hidden shadow-md shadow-black/10 relative group cursor-pointer"
+    <button
+    onClick={() => navigate(ApplicationRoutes.pages.category(id), {state: { categoryTitle: title, categoryId: id} })}
+      className="w-full appearance-none block aspect-square rounded-3xl overflow-hidden shadow-md shadow-black/10 relative group cursor-pointer"
     >
 
       <img
@@ -33,7 +37,7 @@ function FoodCategoryCard_1({ img, title }: Props) {
 
       </div>
 
-    </Link>
+    </button>
   )
 }
 

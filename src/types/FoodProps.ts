@@ -11,5 +11,6 @@ export interface FoodProps {
     deliveryTime: {
         from: number;
         to: number;
-    }
+    },
+    categoryId: number
 }

@@ -3,13 +3,15 @@ import { Slider } from "./components/Slider";
 
 interface Props {
   title: string;
-  data: any;
+  data: Array<any>;
   renderer(data: any): ReactNode;
   titleClassName?: string;
   sliderClassName?: string;
+  isSlider?: boolean;
+  dataSectionClassName?: string;
 }
 
-function DataSection_1({ data = undefined, title, renderer, sliderClassName, titleClassName }: Props) {
+function DataSection_1({ data = [], dataSectionClassName="", title, renderer, sliderClassName, titleClassName, isSlider=true }: Props) {
   return (
     <>
       <p
@@ -19,11 +21,23 @@ function DataSection_1({ data = undefined, title, renderer, sliderClassName, tit
       </p>
 
       <div className="mt-8">
-        <Slider
-        sliderClassName={sliderClassName}
-          data={data}
-          renderer={renderer}
-        />
+        {
+          isSlider
+          ?
+          <Slider
+          sliderClassName={sliderClassName}
+            data={data}
+            renderer={renderer}
+          />
+          :
+          <div className={`w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ${dataSectionClassName}`}>
+            {
+              data?.length > 0
+              &&
+              data.map(item => renderer(item))
+            }
+          </div>
+        }
       </div>
     </>
 

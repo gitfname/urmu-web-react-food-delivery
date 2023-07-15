@@ -14,6 +14,9 @@ interface configProps {
             getOurNewMeals: SWRConfiguration,
             getOurBestMeals: SWRConfiguration,
             getFoodCategoories: SWRConfiguration
+        },
+        categories: {
+            getFoodsByCategory: SWRConfiguration
         }
     }
 }
@@ -32,6 +35,14 @@ const config: configProps = {
                 errorRetryCount: 2
             },
             getFoodCategoories: {
+                revalidateOnFocus: false,
+                shouldRetryOnError: true,
+                errorRetryCount: 2
+            }
+        },
+
+        categories: {
+            getFoodsByCategory: {
                 revalidateOnFocus: false,
                 shouldRetryOnError: true,
                 errorRetryCount: 2

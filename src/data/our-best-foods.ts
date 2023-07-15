@@ -1,7 +1,8 @@
 
+import { FoodProps } from "../types"
 import getBaseUrl from "../utils/base-url"
 
-const ourBestFoods = [
+const ourBestFoods: Array<FoodProps> = [
     {
         id: 10437,
         title: "دسته گل سرخ",
@@ -14,7 +15,9 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 1
+        
     },
     {
         id: 19285,
@@ -28,7 +31,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 2
     },
     {
         id: 34627,
@@ -42,7 +46,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 3
     },
     {
         id: 50318,
@@ -56,7 +61,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 4
     },
     {
         id: 75842,
@@ -70,7 +76,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 5
     },
     {
         id: 97243,
@@ -84,7 +91,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 6
     },
     {
         id: 61597,
@@ -98,7 +106,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 7
     },
     {
         id: 82914,
@@ -112,7 +121,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 8
     },
     {
         id: 14259,
@@ -126,7 +136,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 9
     },
     {
         id: 70013,
@@ -140,7 +151,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 10
     },
     {
         id: 47836,
@@ -154,7 +166,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 11
     },
     {
         id: 20223,
@@ -168,7 +181,8 @@ const ourBestFoods = [
         deliveryTime: {
             from: 10,
             to: 20
-        }
+        },
+        categoryId: 12
     }
 ]
 

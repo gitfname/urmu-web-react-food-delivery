@@ -21,7 +21,7 @@ function ApplicationLayout({ children }: Props) {
 
 
             {/* main section */}
-            <div className="overflow-y-auto">
+            <div id="page-container" className="overflow-y-auto">
                 {children}
             </div>
 

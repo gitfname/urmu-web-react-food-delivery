@@ -1,12 +1,12 @@
 
-import { AiOutlineHeart } from "react-icons/ai"
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 import { FoodCard_1Props as Props } from "../../types"
 import { Rating } from "../Rating"
 import { useCartStore } from "../../stores/Cart"
 
 function FoodCard_1({ id, commentsCount, deliveryTime, img, isBookMarked, rating, title, price, discount }: Props) {
 
-    const [ addnewItem, removeItemById ] = useCartStore(selector => [selector.api.addNewItem, selector.api.removeItemById])
+    const [addnewItem, removeItemById] = useCartStore(selector => [selector.api.addNewItem, selector.api.removeItemById])
 
     const handleOnDecreaseClick = () => {
         removeItemById(id)
@@ -49,9 +49,16 @@ function FoodCard_1({ id, commentsCount, deliveryTime, img, isBookMarked, rating
             {/* is bookmarked */}
             <button
                 className="appearance-none absolute top-3 right-3 p-1.5 bg-transparent/30
-                backdrop-blur-sm rounded-lg shadow-md shadow-black/10"
+                backdrop-blur-sm rounded-lg shadow-md shadow-black/10 active:scale-95
+                transition-transform duration-300"
             >
-                <AiOutlineHeart className="w-5 h-5 fill-gray-50" />
+                {
+                    isBookMarked
+                        ?
+                        <AiFillHeart className="w-5 h-5 fill-gray-50" />
+                        :
+                        <AiOutlineHeart className="w-5 h-5 fill-gray-50" />
+                }
             </button>
 
             <div

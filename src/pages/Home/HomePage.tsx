@@ -3,7 +3,6 @@ import { swrConfig } from "../../SWRconfig"
 import { DataSection_1 } from "../../components/DataSection_1"
 import { FoodCard_1 } from "../../components/FoodCard_1"
 import { FoodCategoryCard_1 } from "../../components/FoodCategoryCard_1"
-import { OurFoodsInfiniteSlider } from "../../components/OurFoodsInfiniteSlider"
 import { getOurNewMeals, getOurBestFoods } from "../../services/api"
 import { getFoodCategories } from "../../services/api/getFoodCategories"
 import { FoodCard_1Props } from "../../types"
@@ -75,6 +74,7 @@ function HomePage() {
               foodCategories?.data.map(item => (
                 <FoodCategoryCard_1
                   key={item.id}
+                  id={item.id}
                   img={item.img}
                   title={item.title}
                 />
@@ -101,7 +101,7 @@ function HomePage() {
                 title="غذاهای جدید ما"
                 titleClassName="px-4 md:px-8"
                 sliderClassName="!px-3 md:!px-8"
-                data={ourNewMeals?.data}
+                data={ourNewMeals?.data || []}
                 renderer={(data: FoodCard_1Props) => (
                   <div className="pb-3 px-1">
                     <FoodCard_1
@@ -130,7 +130,9 @@ function HomePage() {
                 title="بهترین غذا های ما"
                 titleClassName="px-4 md:px-8"
                 sliderClassName="!px-3 md:!px-8"
-                data={ourBestMeals?.data}
+                data={ourBestMeals?.data || []}
+                isSlider={false}
+                dataSectionClassName="px-4 md:px-8"
                 renderer={(data: FoodCard_1Props) => (
                   <div className="pb-3 px-1">
                     <FoodCard_1
@@ -140,7 +142,6 @@ function HomePage() {
                   </div>
                 )}
               />
-
         }
       </div>
 
