@@ -1,5 +1,5 @@
 
-import { useLocation } from "react-router-dom"
+import { useLocation, useParams } from "react-router-dom"
 import { FoodProps } from "../../types"
 import useSWR from "swr"
 import { getFoodById } from "../../services/api"
@@ -10,8 +10,7 @@ import { Rating } from "../../components/Rating"
 
 function SingleFoodPage() {
 
-    const { state } = useLocation()
-    const { id } = state
+    const { id } = useParams()
 
     const {
         data: foodData,
@@ -19,7 +18,7 @@ function SingleFoodPage() {
         isLoading: isFoodDataLoading,
     } = useSWR(
         swrConfig.keys.getSingleFood + "/" + id,
-        async () => await getFoodById(id),
+        async () => await getFoodById(parseInt(id)),
         swrConfig.configs.pages.singleFood.getSingleFood
     )
 

@@ -25,14 +25,8 @@ function FoodCard_1({ id, commentsCount, deliveryTime, img, isBookMarked, rating
     }
 
     const handleCardClick = () => {
-
-        const state = {
-            id: id
-        }
-
         navigate(
-            ApplicationRoutes.pages.singleFood(id),
-            { state }
+            ApplicationRoutes.pages.singleFood(id)
         )
     }
 
