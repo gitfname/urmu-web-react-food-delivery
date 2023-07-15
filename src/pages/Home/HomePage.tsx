@@ -1,187 +1,47 @@
 
+import { swrConfig } from "../../SWRconfig"
 import { DataSection_1 } from "../../components/DataSection_1"
 import { FoodCard_1 } from "../../components/FoodCard_1"
 import { FoodCategoryCard_1 } from "../../components/FoodCategoryCard_1"
 import { OurFoodsInfiniteSlider } from "../../components/OurFoodsInfiniteSlider"
+import { getOurNewMeals, getOurBestFoods } from "../../services/api"
+import { getFoodCategories } from "../../services/api/getFoodCategories"
 import { FoodCard_1Props } from "../../types"
 import getBaseUrl from "../../utils/base-url"
 import { AiFillFire } from "react-icons/ai"
+import useSWR from "swr"
 
 function HomePage() {
 
-  const ourNewMeals: Array<FoodCard_1Props> = [
-    {
-      id: 0,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-2.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "نایس جویس",
-      price: 190000,
-      discount: undefined
-    },
-    {
-      id: 1,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-3.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "دابل برگر",
-      price: 200000,
-      discount: undefined
-    },
-    {
-      id: 2,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-4.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "غذای ترکی هلال",
-      price: 140000,
-      discount: undefined
-    },
-    {
-      id: 3,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-5.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "سوپر کباب",
-      price: 180000,
-      discount: 33
-    },
-    {
-      id: 4,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-6.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "پیتزا ساده",
-      price: 180000,
-      discount: 11
-    },
-    {
-      id: 5,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-7.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "برنج",
-      price: 160000,
-      discount: undefined
-    }
-  ]
+  const {
+    data: ourNewMeals,
+    error: ourNewMealsError,
+    isLoading: isOurNewMealsLoading
+  } = useSWR(
+    swrConfig.keys.ourNewMeals,
+    async () => await getOurNewMeals(),
+    swrConfig.configs.pages.home.getOurNewMeals
+  )
 
-  const ourBestMeals: Array<FoodCard_1Props> = [
-    {
-      id: 0,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-2.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "نایس جویس",
-      price: 190000,
-      discount: undefined
-    },
-    {
-      id: 1,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-3.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "دابل برگر",
-      price: 200000,
-      discount: undefined
-    },
-    {
-      id: 2,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-4.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "غذای ترکی هلال",
-      price: 140000,
-      discount: 10
-    },
-    {
-      id: 3,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-5.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "سوپر کباب",
-      price: 180000,
-      discount: undefined
-    },
-    {
-      id: 4,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-6.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "پیتزا ساده",
-      price: 180000,
-      discount: undefined
-    },
-    {
-      id: 5,
-      commentsCount: 0,
-      img: getBaseUrl() + "/images/image-7.jpg",
-      rating: 3,
-      isBookMarked: false,
-      deliveryTime: {
-        from: 10,
-        to: 20
-      },
-      title: "برنج",
-      price: 180000,
-      discount: undefined
-    }
-  ]
+  const {
+    data: ourBestMeals,
+    error: ourBestMealsError,
+    isLoading: isOurBestMealsLoading
+  } = useSWR(
+    swrConfig.keys.ourBestMeals,
+    async () => await getOurBestFoods(),
+    swrConfig.configs.pages.home.getOurBestMeals
+  )
+
+  const {
+    data: foodCategories,
+    error: foodCategoriesError,
+    isLoading: isFoodCategoriesLoading
+  } = useSWR(
+    swrConfig.keys.foodCategories,
+    async () => await getFoodCategories(),
+    swrConfig.configs.pages.home.getFoodCategoories
+  )
 
   return (
     <div className="w-full h-max pb-10">
@@ -205,55 +65,22 @@ function HomePage() {
         </p>
 
         <div className="w-full mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/iranian-food.jpg'}
-            title="غذای ایرانی"
-          />
+          {
+            isFoodCategoriesLoading
+              ?
+              <p>Loading...</p>
+              :
+              !foodCategoriesError
+              &&
+              foodCategories?.data.map(item => (
+                <FoodCategoryCard_1
+                  key={item.id}
+                  img={item.img}
+                  title={item.title}
+                />
+              ))
 
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/sandwich.jpg'}
-            title="ساندویچ"
-          />
-
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/soup.jpg'}
-            title="سوپ"
-          />
-
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/kebab.jpg'}
-            title="کباب"
-          />
-
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/pizza.jpg'}
-            title="پیتزا"
-          />
-
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/stick.jpg'}
-            title="استیک"
-          />
-
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/breakfast.jpg'}
-            title="صبحانه"
-          />
-
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/salad.jpg'}
-            title="سالاد"
-          />
-
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/pasta.jpg'}
-            title="پاستا"
-          />
-
-          <FoodCategoryCard_1
-            img={getBaseUrl() + '/images/fried.jpg'}
-            title="سوخاری"
-          />
+          }
         </div>
 
       </div>
@@ -261,38 +88,60 @@ function HomePage() {
 
       {/* our new foods */}
       <div className="w-full mt-16">
-        <DataSection_1
-          title="غذاهای جدید ما"
-          titleClassName="px-4 md:px-8"
-          sliderClassName="!px-3 md:!px-8"
-          data={ourNewMeals}
-          renderer={(data: FoodCard_1Props) => (
-            <div className="pb-3 px-1">
-              <FoodCard_1
-                key={data.id}
-                {...data}
+        {
+          isOurNewMealsLoading
+            ?
+            <p>loading</p>
+            :
+            ourNewMealsError
+              ?
+              <p>something went wrong</p>
+              :
+              <DataSection_1
+                title="غذاهای جدید ما"
+                titleClassName="px-4 md:px-8"
+                sliderClassName="!px-3 md:!px-8"
+                data={ourNewMeals?.data}
+                renderer={(data: FoodCard_1Props) => (
+                  <div className="pb-3 px-1">
+                    <FoodCard_1
+                      key={data.id}
+                      {...data}
+                    />
+                  </div>
+                )}
               />
-            </div>
-          )}
-        />
+
+        }
       </div>
 
-      {/* our new foods */}
+      {/* our best foods */}
       <div className="w-full mt-16">
-        <DataSection_1
-          title="بهترین غذا های ما"
-          titleClassName="px-4 md:px-8"
-          sliderClassName="!px-3 md:!px-8"
-          data={ourBestMeals}
-          renderer={(data: FoodCard_1Props) => (
-            <div className="pb-3 px-1">
-              <FoodCard_1
-                key={data.id}
-                {...data}
+        {
+          isOurBestMealsLoading
+            ?
+            <p>loading</p>
+            :
+            ourBestMealsError
+              ?
+              <p>something went wrong</p>
+              :
+              <DataSection_1
+                title="بهترین غذا های ما"
+                titleClassName="px-4 md:px-8"
+                sliderClassName="!px-3 md:!px-8"
+                data={ourBestMeals?.data}
+                renderer={(data: FoodCard_1Props) => (
+                  <div className="pb-3 px-1">
+                    <FoodCard_1
+                      key={data.id}
+                      {...data}
+                    />
+                  </div>
+                )}
               />
-            </div>
-          )}
-        />
+
+        }
       </div>
 
 

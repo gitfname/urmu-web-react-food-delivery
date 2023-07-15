@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { ApplicationDefaultLang, ApplicationSupportedLangs } from "./constants";
 import { ApplicationRoutes } from "./routes";
 import 'swiper/css';
+import { Categories } from "./pages/Categories";
 
 
 function App() {
@@ -33,13 +34,13 @@ function App() {
       <Routes>
 
         <Route
-          path={ApplicationRoutes.home}
+          path={ApplicationRoutes.pages.home}
           element={<HomePage />}
         />
 
         <Route
-          path="about"
-          element={<div>About page</div>}
+          path={ApplicationRoutes.pages.categories}
+          element={<Categories />}
         />
 
       </Routes>

@@ -1,4 +1,7 @@
 
+import { Link } from "react-router-dom";
+import { ApplicationRoutes } from "../../routes";
+
 interface Props {
   title: string;
   img: string;
@@ -6,8 +9,9 @@ interface Props {
 
 function FoodCategoryCard_1({ img, title }: Props) {
   return (
-    <div
-      className="w-full aspect-square rounded-3xl overflow-hidden shadow-md shadow-black/10 relative group cursor-pointer"
+    <Link
+      to={ApplicationRoutes.pages.category(33)}
+      className="w-full block aspect-square rounded-3xl overflow-hidden shadow-md shadow-black/10 relative group cursor-pointer"
     >
 
       <img
@@ -29,7 +33,7 @@ function FoodCategoryCard_1({ img, title }: Props) {
 
       </div>
 
-    </div>
+    </Link>
   )
 }
 
