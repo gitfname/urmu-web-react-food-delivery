@@ -4,7 +4,8 @@ import { SWRConfiguration } from "swr"
 const keys = {
     ourNewMeals: "/our-new-meals",
     ourBestMeals: "/our-best-meals",
-    foodCategories: "/food-categories"
+    foodCategories: "/food-categories",
+    getSingleFood: "/foods/"
 }
 
 
@@ -17,6 +18,9 @@ interface configProps {
         },
         categories: {
             getFoodsByCategory: SWRConfiguration
+        },
+        singleFood: {
+            getSingleFood: SWRConfiguration
         }
     }
 }
@@ -43,6 +47,14 @@ const config: configProps = {
 
         categories: {
             getFoodsByCategory: {
+                revalidateOnFocus: false,
+                shouldRetryOnError: true,
+                errorRetryCount: 2
+            }
+        },
+
+        singleFood: {
+            getSingleFood: {
                 revalidateOnFocus: false,
                 shouldRetryOnError: true,
                 errorRetryCount: 2

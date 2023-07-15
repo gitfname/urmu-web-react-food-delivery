@@ -4,186 +4,122 @@ import getBaseUrl from "../utils/base-url"
 
 const ourBestFoods: Array<FoodProps> = [
     {
+        id: 72946,
+        title: "شیرینی کریم پف",
+        discount: 7,
+        img: getBaseUrl() + "/images/image-9.jpg",
+        img_1280x1080: getBaseUrl() + "/images/9_1920x1080.png",
+        isBookMarked: true,
+        price: 43000,
+        rating: 3,
+        commentsCount: 9,
+        deliveryTime: { from: 12, to: 20 },
+        categoryId: 9
+    },
+    {
         id: 10437,
-        title: "دسته گل سرخ",
+        title: "سوپ جو",
         discount: 5,
-        img: getBaseUrl()+"/images/image-10.jpg",
+        img: getBaseUrl() + "/images/image-10.jpg",
+        img_1280x1080: getBaseUrl() + "/images/10_1920x1080.png",
         isBookMarked: false,
         price: 52000,
         rating: 5,
         commentsCount: 33,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 1
-        
-    },
-    {
-        id: 19285,
-        title: "شیربرنج",
-        discount: 20,
-        img: getBaseUrl()+"/images/image-11.jpg",
-        isBookMarked: false,
-        price: 58000,
-        rating: 4,
-        commentsCount: 12,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 2
-    },
-    {
-        id: 34627,
-        title: "آبمیوه پرتقال",
-        discount: 0,
-        img: getBaseUrl()+"/images/image-12.jpg",
-        isBookMarked: true,
-        price: 30000,
-        rating: 3,
-        commentsCount: 8,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 3
-    },
-    {
-        id: 50318,
-        title: "کیک بادام و خرما",
-        discount: 15,
-        img: getBaseUrl()+"/images/image-13.jpg",
-        isBookMarked: false,
-        price: 95000,
-        rating: 4,
-        commentsCount: 5,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 4
-    },
-    {
-        id: 75842,
-        title: "قیمه بادمجان",
-        discount: 8,
-        img: getBaseUrl()+"/images/image-14.jpg",
-        isBookMarked: true,
-        price: 67500,
-        rating: 4,
-        commentsCount: 25,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
+        deliveryTime: { from: 15, to: 19 },
         categoryId: 5
     },
     {
-        id: 97243,
-        title: "کاکتوس پرتقالی",
-        discount: 0,
-        img: getBaseUrl()+"/images/image-15.jpg",
-        isBookMarked: false,
-        price: 42000,
-        rating: 2,
-        commentsCount: 0,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 6
-    },
-    {
-        id: 61597,
-        title: "چیپس بادام زمینی",
+        id: 90216,
+        title: "آبلیمو تازه",
         discount: 10,
-        img: getBaseUrl()+"/images/image-16.jpg",
+        img: getBaseUrl() + "/images/image-11.jpg",
+        img_1280x1080: getBaseUrl() + "/images/11_1920x1080.png",
         isBookMarked: true,
-        price: 18000,
-        rating: 3,
-        commentsCount: 15,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 7
-    },
-    {
-        id: 82914,
-        title: "کباب برگ",
-        discount: 4,
-        img: getBaseUrl()+"/images/image-17.jpg",
-        isBookMarked: false,
         price: 78000,
-        rating: 5,
-        commentsCount: 33,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 8
+        rating: 4,
+        commentsCount: 20,
+        deliveryTime: { from: 11, to: 19 },
+        categoryId: 3
     },
     {
-        id: 14259,
-        title: "آب نبات",
-        discount: 0,
-        img: getBaseUrl()+"/images/image-18.jpg",
-        isBookMarked: true,
-        price: 24000,
-        rating: 3,
-        commentsCount: 7,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
+        id: 30481,
+        title: "کیک تیرامیسو",
+        discount: 15,
+        img: getBaseUrl() + "/images/image-12.jpg",
+        img_1280x1080: getBaseUrl() + "/images/12_1920x1080.png",
+        isBookMarked: false,
+        price: 95000,
+        rating: 4,
+        commentsCount: 12,
+        deliveryTime: { from: 10, to: 16 },
         categoryId: 9
     },
     {
-        id: 70013,
-        title: "کیک شکلاتی",
-        discount: 18,
-        img: getBaseUrl()+"/images/image-19.jpg",
+        id: 61739,
+        title: "ساندویچ گوشت",
+        discount: 0,
+        img: getBaseUrl() + "/images/image-13.jpg",
+        img_1280x1080: getBaseUrl() + "/images/13_1920x1080.png",
         isBookMarked: false,
-        price: 55000,
+        price: 30000,
+        rating: 3,
+        commentsCount: 6,
+        deliveryTime: { from: 12, to: 19 },
+        categoryId: 1
+    },
+    {
+        id: 83625,
+        title: "لواشک خشکبار",
+        discount: 8,
+        img: getBaseUrl() + "/images/image-14.jpg",
+        img_1280x1080: getBaseUrl() + "/images/14_1920x1080.png",
+        isBookMarked: true,
+        price: 62000,
         rating: 4,
-        commentsCount: 20,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
+        commentsCount: 24,
+        deliveryTime: { from: 11, to: 18 },
         categoryId: 10
     },
     {
-        id: 47836,
-        title: "کنسرو ماهی تن ماهیان دریایی",
-        discount: 22,
-        img: getBaseUrl()+"/images/image-20.jpg",
-        isBookMarked: true,
-        price: 115000,
-        rating: 4,
-        commentsCount: 38,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 11
+        id: 15372,
+        title: "چای ترش برگ",
+        discount: 0,
+        img: getBaseUrl() + "/images/image-15.jpg",
+        img_1280x1080: getBaseUrl() + "/images/15_1920x1080.png",
+        isBookMarked: false,
+        price: 25000,
+        rating: 3,
+        commentsCount: 8,
+        deliveryTime: { from: 10, to: 15 },
+        categoryId: 2
     },
     {
-        id: 20223,
-        title: "سالاد افتابگردان",
-        discount: 3,
-        img: getBaseUrl()+"/images/image-21.jpg",
-        isBookMarked: false,
-        price: 49000,
+        id: 73641,
+        title: "کیک کارامل",
+        discount: 20,
+        img: getBaseUrl() + "/images/image-16.jpg",
+        img_1280x1080: getBaseUrl() + "/images/16_1920x1080.jpg",
+        isBookMarked: true,
+        price: 69000,
         rating: 4,
         commentsCount: 17,
-        deliveryTime: {
-            from: 10,
-            to: 20
-        },
-        categoryId: 12
-    }
+        deliveryTime: { from: 14, to: 20 },
+        categoryId: 9
+    },
+    {
+        id: 90245,
+        title: "هویج پلو با مرغ",
+        discount: 4,
+        img: getBaseUrl() + "/images/image-17.jpg",
+        img_1280x1080: getBaseUrl() + "/images/17_1920x1080.jpg",
+        isBookMarked: false,
+        price: 57500,
+        rating: 3,
+        commentsCount: 9,
+        deliveryTime: { from: 12, to: 18 },
+        categoryId: 4
+    },
 ]
 
 export {

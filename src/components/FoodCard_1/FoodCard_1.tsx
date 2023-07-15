@@ -1,11 +1,14 @@
 
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
-import { FoodCard_1Props as Props } from "../../types"
+import { FoodProps, FoodCard_1Props as Props } from "../../types"
 import { Rating } from "../Rating"
 import { useCartStore } from "../../stores/Cart"
+import { useNavigate } from "react-router-dom"
+import { ApplicationRoutes } from "../../routes"
 
-function FoodCard_1({ id, commentsCount, deliveryTime, img, isBookMarked, rating, title, price, discount }: Props) {
+function FoodCard_1({ id, commentsCount, deliveryTime, img, isBookMarked, rating, title, price, discount, categoryId }: Props) {
 
+    const navigate = useNavigate()
     const [addnewItem, removeItemById] = useCartStore(selector => [selector.api.addNewItem, selector.api.removeItemById])
 
     const handleOnDecreaseClick = () => {
@@ -21,10 +24,23 @@ function FoodCard_1({ id, commentsCount, deliveryTime, img, isBookMarked, rating
         })
     }
 
+    const handleCardClick = () => {
+
+        const state = {
+            id: id
+        }
+
+        navigate(
+            ApplicationRoutes.pages.singleFood(id),
+            { state }
+        )
+    }
+
     return (
-        <div
+        <button
+            onClick={handleCardClick}
             dir="rtl"
-            className="w-full h-full rounded-xl overflow-hidden border border-slate-300/50
+            className="block appearance-none w-full h-full rounded-xl overflow-hidden border border-slate-300/50
             border-t-transparent shadow-md shadow-black/5 relative pb-3"
         >
 
@@ -105,7 +121,7 @@ function FoodCard_1({ id, commentsCount, deliveryTime, img, isBookMarked, rating
                         <p className="text-xs text-slate-700 font-[vazirLight] w-max">
                             ( {commentsCount} نفر )
                         </p>
-                        <Rating className="mt-2" total={5} value={3} />
+                        <Rating className="mt-2" total={5} value={rating} />
                     </div>
 
                 </div>
@@ -113,7 +129,7 @@ function FoodCard_1({ id, commentsCount, deliveryTime, img, isBookMarked, rating
 
             </div>
 
-        </div>
+        </button>
     )
 }
 

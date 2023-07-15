@@ -14,4 +14,5 @@ export interface FoodCard_1Props {
     title: string;
     price: number;
     discount: number | undefined;
+    categoryId: number;
 }

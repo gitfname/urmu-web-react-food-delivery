@@ -8,6 +8,7 @@ import { ApplicationDefaultLang, ApplicationSupportedLangs } from "./constants";
 import { ApplicationRoutes } from "./routes";
 import 'swiper/css';
 import { Categories } from "./pages/Categories";
+import { SingleFoodPage } from "./pages/SingleFoodPage";
 
 
 function App() {
@@ -41,6 +42,11 @@ function App() {
         <Route
           path={ApplicationRoutes.pages.categories}
           element={<Categories />}
+        />
+
+        <Route
+          path={ApplicationRoutes.pages.singleFoods}
+          element={<SingleFoodPage />}
         />
 
       </Routes>
